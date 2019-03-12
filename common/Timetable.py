@@ -35,13 +35,13 @@ class Timetable(object):
 			
 			# Verify that the entry header contains a subject identifier
 			headerDetails = header[0].get_text()
-			headerDetails = re.search('(\w+)\s+([\w| ]+)', headerDetails)
+			headerDetails = re.search('(\w+)\s+(.+)', headerDetails)
 			if headerDetails is None:
 				raise MalformedResultError
 			
 			# Extract the subject code and name from the identifier
 			details['code'] = headerDetails.group(1)
-			details['name'] = headerDetails.group(2)
+			details['name'] = headerDetails.group(2).strip()
 			
 			# Extract the event type (lecture, tutorial, etc.)
 			details['type'] = header[1].get_text().strip()
@@ -52,7 +52,8 @@ class Timetable(object):
 			if len(fields) != 8:
 				raise MalformedResultError
 			
-			# Extract the location and day of the week
+			# Extract the staff member, location and day of the week
+			details['staff'] = fields[0]
 			details['location'] = fields[2]
 			details['day'] = fields[4]
 			
