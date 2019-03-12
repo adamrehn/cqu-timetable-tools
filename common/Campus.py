@@ -11,7 +11,7 @@ TIMEZONES = {
 
 class Campus(object):
 	'''
-	Provides functionality related CQU campus locations
+	Provides functionality related to CQU campus locations
 	'''
 	
 	@staticmethod
