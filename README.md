@@ -4,6 +4,7 @@ CQUniversity Timetable Tools
 This repository contains tools designed to enhance the functionality of the [CQUniversity Timetable](https://handbook.cqu.edu.au/facet/timetables/index). The following tools are included:
 
 - [**export-ics.py**](#exporting-calendar-events) - exports timetable events as an [iCalendar](https://en.wikipedia.org/wiki/ICalendar) (RFC 5545) file, suitable for importing into most common calendar software.
+- [**export-json.py**](#exporting-json-data) - exports timetable events as raw JSON data, suitable for consumption and further processing by other tools.
 
 
 ## Requirements and installation
@@ -31,7 +32,18 @@ For example, to export the timetable events for the subject [COIT11222](https://
 python3 export-ics.py timetable.ics CNS 1 COIT11222
 ```
 
+Wildcards are also supported. For example, to export the timetable events for all IT subjects, you would run:
+
+```
+python3 export-ics.py timetable.ics CNS 1 COIT*
+```
+
 See the file [common/Campus.py](./common/Campus.py) for a list of supported campus codes.
+
+
+## Exporting JSON data
+
+The usage syntax of [export-json.py](./export-json.py) is identical to that of [export-ics.py](./export-ics.py). See the section [Exporting calendar events](#exporting-calendar-events) for usage examples.
 
 
 ## Legal

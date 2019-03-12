@@ -33,7 +33,7 @@ else:
 	print('{} OUTFILE.JSON CAMPUS TERM SUBJECT1 SUBJECT2 ... SUBJECTN'.format(sys.argv[0]))
 	print()
 	print('Example:')
-	print('{} timetable.JSON CNS 1 COIT11222 COIT13234'.format(sys.argv[0]))
+	print('{} timetable.json CNS 1 COIT11222 COIT13234'.format(sys.argv[0]))
 	print()
 	print('This will export the events for these two subjects for Term 1 on the Cairns campus.')
 	print('Note that wildcards are also supported. For example, the pattern "COIT1*" will match')
