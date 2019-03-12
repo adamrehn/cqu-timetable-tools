@@ -19,7 +19,7 @@ pip3 install -r requirements.txt
 
 ## Exporting calendar events
 
-Timetable events can be exported to iCalendar format using the script [export-ics.py](./export-ics.py). The usage syntax is as follows:
+Timetable events can be exported to iCalendar format using the script [export-ics.py](./export-ics.py). The usage syntax is as follows (note that you may need to use `python` instead of `python3` under Windows):
 
 ```
 python3 export-ics.py OUTFILE.ICS CAMPUS TERM SUBJECT1 SUBJECT2 ... SUBJECTN
